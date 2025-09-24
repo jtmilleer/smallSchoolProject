@@ -67,7 +67,7 @@
     },
     {
       "question": "Where did Rurik move the Russian capital during his rule?",
-      "options": ["to St. Petersburg", "to Moscow", "to Novgorod", "to Kiev"],
+      "options": ["St. Petersburg", "Moscow", "Novgorod", "Kiev"],
       "answer": "Novgorod"
     },
     {
@@ -139,6 +139,121 @@
       "question": "There was a 2020 change to the Russian Constitution that created a new type of Federal Subject.",
       "options": ["True", "False"],
       "answer": "False"
+    },
+    {
+      "question": "What is the capital of Russia?",
+      "options": ["Moscow", "St. Petersburg", "Novgorod", "Kiev"],
+      "answer": "Moscow"
+    },
+    {
+      "question": "The population of Moscow is approximately 12.4 million.",
+      "options": ["True", "False"],
+      "answer": "True"
+    },
+    {
+      "question": "In rural Russia, villages often have a mix of one-story houses with gardens and 4–5 story apartment blocks.",
+      "options": ["True", "False"],
+      "answer": "True"
+    },
+    {
+      "question": "Infrastructure in rural Russia is highly modern and uniform across the country.",
+      "options": ["True", "False"],
+      "answer": "False"
+    },
+    {
+      "question": "Common vegetables grown in Russian village gardens include potatoes, carrots, and zucchini.",
+      "options": ["True", "False"],
+      "answer": "True"
+    },
+    {
+      "question": "Summer houses in rural Russia usually have farm animals.",
+      "options": ["True", "False"],
+      "answer": "False"
+    },
+    {
+      "question": "What is the official language of Russia?",
+      "options": ["Russian", "English", "German", "Ukrainian"],
+      "answer": "Russian"
+    },
+    {
+      "question": "Which alphabet is used in Russia?",
+      "options": ["Latin", "Cyrillic", "Greek", "Arabic"],
+      "answer": "Cyrillic"
+    },
+    {
+      "question": "How many letters are in the Russian alphabet?",
+      "options": ["30", "31", "32", "33"],
+      "answer": "33"
+    },
+    {
+      "question": "Russia contains about what fraction of the world's unfrozen freshwater?",
+      "options": ["1/10", "1/4", "1/3", "1/2"],
+      "answer": "1/4"
+    },
+    {
+      "question": "Who is considered the founder of the first Russian state?",
+      "options": ["Ivan the Terrible", "Rurik", "Peter the Great", "Mikhail Romanov"],
+      "answer": "Rurik"
+    },
+    {
+      "question": "The Rurik dynasty ruled Russia for approximately 740 years.",
+      "options": ["True", "False"],
+      "answer": "True"
+    },
+    {
+      "question": "Rurik himself was not ethnically Russian.",
+      "options": ["True", "False"],
+      "answer": "True"
+    },
+    {
+      "question": "Where did Rurik settle?",
+      "options": ["Kiev", "Moscow", "Novgorod", "St. Petersburg"],
+      "answer": "Novgorod"
+    },
+    {
+      "question": "Rurik’s brothers controlled nearby regions while he ruled Novgorod.",
+      "options": ["True", "False"],
+      "answer": "True"
+    },
+    {
+      "question": "The 'land of the Rus' refers to the early state founded by Rurik.",
+      "options": ["True", "False"],
+      "answer": "True"
+    },
+    {
+      "question": "Traditional early Russian way of life emphasized agriculture, hunting, and beekeeping.",
+      "options": ["True", "False"],
+      "answer": "True"
+    },
+    {
+      "question": "Defending land was a frequent necessity in early Russia.",
+      "options": ["True", "False"],
+      "answer": "True"
+    },
+    {
+      "question": "Russia historically expanded its territory significantly over time.",
+      "options": ["True", "False"],
+      "answer": "True"
+    },
+    {
+      "question": "Which Russian prince converted to Christianity in 988 to unify his people?",
+      "options": ["Vladimir of Kiev", "Ivan the Terrible", "Peter the Great", "Alexander II"],
+      "answer": "Vladimir of Kiev"
+    },
+    {
+      "question": "Vladimir of Kiev explored multiple religions before choosing Eastern Orthodox Christianity.",
+      "options": ["True", "False"],
+      "answer": "True"
+    },
+    {
+      "question": "The Christianization of Kievan Rus’ started from the top, with elites converting first.",
+      "options": ["True", "False"],
+      "answer": "True"
+    },
+    {
+      "question": "Christianity in Kievan Rus’ was primarily adopted to unify the population under the prince’s authority.",
+      "options": ["True", "False"],
+      "answer": "True"
     }
   ]
 }
