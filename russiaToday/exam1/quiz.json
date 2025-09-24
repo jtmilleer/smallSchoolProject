@@ -1,0 +1,144 @@
+{
+  "quiz": [
+    {
+      "question": "What was the name of the last Russian dynasty?",
+      "options": ["Rurik", "Romanov", "Lenin"],
+      "answer": "Romanov"
+    },
+    {
+      "question": "Lenin lead the February Revolution of 1917.",
+      "options": ["True", "False"],
+      "answer": "False"
+    },
+    {
+      "question": "Is Russian the official language of the Russian Federation?",
+      "options": ["Yes", "No"],
+      "answer": "Yes"
+    },
+    {
+      "question": "Russia has many different ethnicities, but 80% of the population is Russian ethnicity.",
+      "options": ["Yes", "No"],
+      "answer": "Yes"
+    },
+    {
+      "question": "Who was the last Tsar of Russia?",
+      "options": ["Alexander II", "Alexander III", "Mikhail Romanov", "Nicholas II"],
+      "answer": "Nicholas II"
+    },
+    {
+      "question": "Who was the last woman to rule over Russia?",
+      "options": ["Anna", "Elizabeth", "Catherine the Great"],
+      "answer": "Catherine the Great"
+    },
+    {
+      "question": "Many Russians would consider themselves to be 'fatalists'.",
+      "options": ["True", "False"],
+      "answer": "True"
+    },
+    {
+      "question": "Who is currently the president of Russia?",
+      "options": ["Vladimir Putin", "Dmitry Medvedev", "Mikhail Gorbachev", "Boris Yeltsin"],
+      "answer": "Vladimir Putin"
+    },
+    {
+      "question": "What are the colors of Russia’s flag?",
+      "options": ["Red, yellow, blue", "Red, white, black", "White, blue, red", "Black, white, blue"],
+      "answer": "White, blue, red"
+    },
+    {
+      "question": "The Russian emblem has a two-headed eagle on it symbolizing looking to the East and West at the same time.",
+      "options": ["True", "False"],
+      "answer": "True"
+    },
+    {
+      "question": "Russia has _ time zones.",
+      "options": ["7", "9", "10", "11", "14"],
+      "answer": "11"
+    },
+    {
+      "question": "The former capital of Russia is St. Petersburg.",
+      "options": ["True", "False"],
+      "answer": "True"
+    },
+    {
+      "question": "How many different ethnicities are there in Russia?",
+      "options": ["190+", "up to120", "only 25", "appx. 50"],
+      "answer": "190+"
+    },
+    {
+      "question": "Where did Rurik move the Russian capital during his rule?",
+      "options": ["to St. Petersburg", "to Moscow", "to Novgorod", "to Kiev"],
+      "answer": "Novgorod"
+    },
+    {
+      "question": "Russian rulers historically have a very close connection with the church.",
+      "options": ["True", "False"],
+      "answer": "True"
+    },
+    {
+      "question": "Ivan the Terrible died without an heir, and 14 years later the Rurik dynasty ended.",
+      "options": ["True", "False"],
+      "answer": "True"
+    },
+    {
+      "question": "What was not Peter the Great's legacy?",
+      "options": ["Gaining access to the Baltic Sea", "Building St. Petersburg", "Turning the Russian Tsardom into the Russian Empire", "Ending serfdom"],
+      "answer": "Ending serfdom"
+    },
+    {
+      "question": "Which is something Russians rarely do?",
+      "options": ["Offer an abundance of food to guests", "Smile in public", "Demonstrate extreme loyalty to their friends", "Do everything to outperform foreigners"],
+      "answer": "Smile in public"
+    },
+    {
+      "question": "Yuri Gagarin was the first person in space.",
+      "options": ["True", "False"],
+      "answer": "True"
+    },
+    {
+      "question": "Russian-speaking refers to...",
+      "options": ["ethnic group of located in a Slavic country", "Russian citizens only.", "Someone who isn't Russian by citizenship or nationality but speaks Russian as a native language"],
+      "answer": "Someone who isn't Russian by citizenship or nationality but speaks Russian as a native language"
+    },
+    {
+      "question": "There is only two Autonomous Oblasts in Russia.",
+      "options": ["True", "False"],
+      "answer": "True"
+    },
+    {
+      "question": "Which place is NOT a city of Federal Significance?",
+      "options": ["Moscow", "St. Petersburg", "Sochi", "Sevastopol"],
+      "answer": "Sochi"
+    },
+    {
+      "question": "Sakha-Yakutia is...",
+      "options": ["The largest republic in Russia", "The only republic in Russia", "The smallest republic in Russia", "The oldest republic in Russia"],
+      "answer": "The largest republic in Russia"
+    },
+    {
+      "question": "Crimea is recognized as a Russian Federal Subject by the US.",
+      "options": ["True", "False"],
+      "answer": "False"
+    },
+    {
+      "question": "Most Russian diamonds come from Sakha.",
+      "options": ["True", "False"],
+      "answer": "True"
+    },
+    {
+      "question": "Russian Republics have their own...",
+      "options": ["President", "Autonomous military unit", "Official language", "All above"],
+      "answer": "Official language"
+    },
+    {
+      "question": "What is the name of the city that Russia is currently renting from Kazakhstan?",
+      "options": ["Crimea", "Sevastopol", "Baikonur", "Sirius"],
+      "answer": "Baikonur"
+    },
+    {
+      "question": "There was a 2020 change to the Russian Constitution that created a new type of Federal Subject.",
+      "options": ["True", "False"],
+      "answer": "False"
+    }
+  ]
+}
