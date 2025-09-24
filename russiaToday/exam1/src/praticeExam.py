@@ -27,13 +27,15 @@ for i, q in enumerate(questions, 1):
     while True:
         try:
             choice = int(input("Your answer (number): "))
-            if 1 <= choice <= len(options):
+            if 1 <= choice <= len(options) or choice == -1:
                 break
             else:
                 print("Please enter a valid option number.")
         except ValueError:
             print("Please enter a number.")
 
+    if choice == -1:
+        break
     selected = options[choice - 1]
 
     # Check correctness
