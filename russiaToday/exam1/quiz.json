@@ -76,11 +76,6 @@
       "answer": "True"
     },
     {
-      "question": "Ivan the Terrible died without an heir, and 14 years later the Rurik dynasty ended.",
-      "options": ["True", "False"],
-      "answer": "True"
-    },
-    {
       "question": "What was not Peter the Great's legacy?",
       "options": ["Gaining access to the Baltic Sea", "Building St. Petersburg", "Turning the Russian Tsardom into the Russian Empire", "Ending serfdom"],
       "answer": "Ending serfdom"
@@ -171,11 +166,6 @@
       "answer": "False"
     },
     {
-      "question": "What is the official language of Russia?",
-      "options": ["Russian", "English", "German", "Ukrainian"],
-      "answer": "Russian"
-    },
-    {
       "question": "Which alphabet is used in Russia?",
       "options": ["Latin", "Cyrillic", "Greek", "Arabic"],
       "answer": "Cyrillic"
@@ -206,11 +196,6 @@
       "answer": "True"
     },
     {
-      "question": "Where did Rurik settle?",
-      "options": ["Kiev", "Moscow", "Novgorod", "St. Petersburg"],
-      "answer": "Novgorod"
-    },
-    {
       "question": "Rurik’s brothers controlled nearby regions while he ruled Novgorod.",
       "options": ["True", "False"],
       "answer": "True"
@@ -227,11 +212,6 @@
     },
     {
       "question": "Defending land was a frequent necessity in early Russia.",
-      "options": ["True", "False"],
-      "answer": "True"
-    },
-    {
-      "question": "Russia historically expanded its territory significantly over time.",
       "options": ["True", "False"],
       "answer": "True"
     },
@@ -254,6 +234,46 @@
       "question": "Christianity in Kievan Rus’ was primarily adopted to unify the population under the prince’s authority.",
       "options": ["True", "False"],
       "answer": "True"
+    },
+    {
+      "question": "The Golden Horde demanded tribute from Russian princes and publicly humiliated them.",
+      "options": ["True", "False"],
+      "answer": "True"
+    },
+    {
+      "question": "Ivan III restricted peasants' movement and centralized power in Moscow.",
+      "options": ["True", "False"],
+      "answer": "True"
+    },
+    {
+      "question": "Ivan III was the first Tsar of Russia.",
+      "options": ["True", "False"],
+      "answer": "False"
+    },
+    {
+      "question": "Ivan IV (Ivan the Terrible) was the first official Tsar of Russia.",
+      "options": ["True", "False"],
+      "answer": "True"
+    },
+    {
+      "question": "Ivan IV conquered Kazan in 1552 and Astrakhan in 1556, opening expansion into non-Slavic territories.",
+      "options": ["True", "False"],
+      "answer": "True"
+    },
+    {
+      "question": "Ivan IV created the Oprichnina, which included public executions and seizure of boyar property.",
+      "options": ["True", "False"],
+      "answer": "True"
+    },
+    {
+      "question": "Ivan IV modernized government by appointing advisors based on merit.",
+      "options": ["True", "False"],
+      "answer": "True"
+    },
+    {
+      "question": "Ivan IV died without an heir.",
+      "options": ["True", "False"],
+      "answer": "False"
     }
   ]
 }
