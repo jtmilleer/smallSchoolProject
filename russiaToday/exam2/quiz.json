@@ -1,0 +1,456 @@
+{
+  "quiz": [
+    {
+      "question": "The Council of the Federation can approve or reject laws issued by the State Duma.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True"
+    },
+    {
+      "question": "Dmitry Medvedev was the first Russian President.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False (Correct answer: Boris Yeltsin was the first Russian President.)"
+    },
+    {
+      "question": "The leading political party in Russia is United Russia (Putin’s party) and it holds the majority of the seats in the State Duma.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True"
+    },
+    {
+      "question": "There is only one house in the legislative branch and it is called the Council of the Federation.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False (Correct answer: Russia has two houses—the State Duma and the Council of the Federation.)"
+    },
+    {
+      "question": "Members of the State Duma are elected by popular vote for a period of 5 years.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True"
+    },
+    {
+      "question": "The Supreme Court in Russia deals with every court case including the matters concerning the constitution.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False (Correct answer: The Constitutional Court handles constitutional matters.)"
+    },
+    {
+      "question": "Archipelago GULAG is a metaphor for a network of prison labor camps.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True"
+    },
+    {
+      "question": "During Stalin's Great Purge millions were sent to GULAGS.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True"
+    },
+    {
+      "question": "The Gulag camps were radically reduced after Stalin’s death but continued to exist until the Gorbachev era.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True"
+    },
+    {
+      "question": "One of the main reasons for the start of Stalin's Great Purge was that his party members started questioning his authority.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True"
+    },
+    {
+      "question": "The Treaty of Rapallo was signed between the Soviet Union and Germany.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True"
+    },
+    {
+      "question": "The secret agreement of the Ribbentrop-Molotov pact was found after the capitulation of Germany.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True"
+    },
+    {
+      "question": "There were about 26.6 million Soviet lives lost in WWII.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True"
+    },
+    {
+      "question": "Russian politicians and the general population of Russia have a preference for autocracy.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True"
+    },
+    {
+      "question": "The Brezhnev Doctrine allowed the Warsaw Pact troops to intervene in any Eastern Bloc nation if they attempted to change their course away from communist rule.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True"
+    },
+    {
+      "question": "The official end of the Cold War was in 1988 when the USSR agreed to a major reduction of weapons and pledged not to interfere with Eastern Europe politics.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True"
+    },
+    {
+      "question": "Yeltsin’s main goal when becoming president was to overcome the hostility of the Cold War to improve the economic situation in Russia.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True"
+    },
+    {
+      "question": "Internal politics turned into foreign politics with the dissolution of the USSR because the USSR was composed of multiple republics that since 1991 had to create new types of policies with each other.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True"
+    },
+    {
+      "question": "Putin in his early presidency wanted to continue Yeltsin’s democratic approach in order to keep peace with the West.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True"
+    },
+    {
+      "question": "In regard to foreign policy, Khrushchev did not want to promote good relations with the West.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False (Correct answer: Khrushchev initially sought better relations with the West.)"
+    },
+    {
+      "question": "The North Atlantic Treaty Organization was created to provide collective security against the Soviet Union.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True"
+    },
+    {
+      "question": "Russia did not inherit the veto power of the USSR in the UN Security Council.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False (Correct answer: Russia did inherit the USSR’s veto power.)"
+    },
+    {
+      "question": "The systemic opposition is the opposition that does NOT support Putin.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False (Correct answer: The systemic opposition supports the current political structure.)"
+    },
+    {
+      "question": "Putin’s administration created the Smart Voting App to rig elections through online voting.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False (Correct answer: The Smart Voting App was created by opposition leader Alexei Navalny.)"
+    },
+    {
+      "question": "Russia officially sent its military forces to annex the Crimea and announce it as Russian territory.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True"
+    },
+    {
+      "question": "The annexation of Crimea was followed by a war between pro-Russian separatists and Ukrainian forces.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True"
+    },
+    {
+      "question": "Non-systemic opposition is the true opposition.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True"
+    },
+    {
+      "question": "Navalny is part of the systemic opposition.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False (Correct answer: Navalny is part of the non-systemic opposition.)"
+    },
+    {
+      "question": "In 1999, _________ named Putin the Prime Minister.",
+      "options": [
+        "Mikhail Gorbachev",
+        "Boris Yeltsin",
+        "Joseph Stalin",
+        "Vladimir Lenin"
+      ],
+      "answer": "Boris Yeltsin"
+    },
+    {
+      "question": "Which of the following is true?",
+      "options": [
+        "Council of Federation can create laws",
+        "Russia is a federation and parliamentary republic",
+        "Council of Federation approve or reject laws",
+        "The president is a part of one of the three branches of power"
+      ],
+      "answer": "Council of Federation approve or reject laws"
+    },
+    {
+      "question": "How many subjects of state power are there?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "answer": "3"
+    },
+    {
+      "question": "Who was the first president of Russia?",
+      "options": [
+        "Boris Yeltsin",
+        "Dmitry Medvedev",
+        "Vladimir Putin",
+        "Mikhail Gorbachev"
+      ],
+      "answer": "Boris Yeltsin"
+    },
+    {
+      "question": "Since 2012, how long is an elected president’s term?",
+      "options": [
+        "3 years",
+        "4 years",
+        "5 years",
+        "6 years"
+      ],
+      "answer": "6 years"
+    },
+    {
+      "question": "How many representatives from each federal subject serve on the Council of the Federation?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": "2"
+    },
+    {
+      "question": "What was the goal of Lenin’s Red Terror?",
+      "options": [
+        "Bring more modernization into Russia",
+        "End the Russian Civil War",
+        "Eliminate supporters of the monarchy/opposition to Bolshevik government",
+        "Spread socialism"
+      ],
+      "answer": "Eliminate supporters of the monarchy/opposition to Bolshevik government"
+    },
+    {
+      "question": "Which of the following is not a characteristic of Stalin’s Great Purge?",
+      "options": [
+        "It was in the 19th century",
+        "At least 750,000 people were executed",
+        "Millions were sent to the gulags",
+        "The NKVD carried out mass arrests and tortures"
+      ],
+      "answer": "It was in the 19th century"
+    },
+    {
+      "question": "What does the archipelago Gulag refer to?",
+      "options": [
+        "The political terror in the 15th century",
+        "The map of bases of the secret police",
+        "The span of multiple prison camps during the 20th century"
+      ],
+      "answer": "The span of multiple prison camps during the 20th century"
+    },
+    {
+      "question": "Where were the largest Gulag camps generally located?",
+      "options": [
+        "In the warmest climate regions",
+        "Close to the big administrative centers",
+        "In the most extreme climate regions",
+        "In the regions close to the borders with the West"
+      ],
+      "answer": "In the most extreme climate regions"
+    },
+    {
+      "question": "Which way were some of the most recent elections rigged?",
+      "options": [
+        "Fake ballots",
+        "Fake candidates",
+        "At-home voting",
+        "Carousels",
+        "All of the above are correct"
+      ],
+      "answer": "All of the above are correct"
+    },
+    {
+      "question": "What was Navalny's main goal when he introduced the Smart Voting App?",
+      "options": [
+        "Outvote Putin's party",
+        "Promote the oppositional candidates that support him",
+        "Make money off the app to fund his anti-Putin activity",
+        "none of the above"
+      ],
+      "answer": "Outvote Putin's party"
+    },
+    {
+      "question": "The concept of Putin's majority…",
+      "options": [
+        "Is fake; he does not have the support of the majority of the population",
+        "Started when Medvedev became president",
+        "Is real and he has indeed had the support of the majority of the population during his presidencies"
+      ],
+      "answer": "Is real and he has indeed had the support of the majority of the population during his presidencies"
+    },
+    {
+      "question": "Why does current administration rig elections?",
+      "options": [
+        "To stop the true opposition from getting seats in the parliament or running against Putin",
+        "To win against the systemic opposition to have the majority in the State Duma",
+        "To achieve a supermajority to promote the continued support of the population",
+        "None of the above"
+      ],
+      "answer": "To stop the true opposition from getting seats in the parliament or running against Putin"
+    },
+    {
+      "question": "Which is not true about the Treaty of Rapallo?",
+      "options": [
+        "First official acknowledgement of the Soviet Union",
+        "Treaty between Soviet Union and the Allied forces",
+        "Renounced all territorial and financial claims against each other",
+        "Opened friendly diplomatic relations"
+      ],
+      "answer": "Treaty between Soviet Union and the Allied forces"
+    },
+    {
+      "question": "What is the correct ordering of Russian leaders from oldest to newest throughout Russian history?",
+      "options": [
+        "Stalin, Putin, Gorbachev, Yeltsin, Lenin",
+        "Lenin, Stalin, Gorbachev, Yeltsin, Putin",
+        "Lenin, Gorbachev, Yeltsin, Stalin, Putin",
+        "Putin, Gorbachev, Lenin, Yeltsin, Stalin"
+      ],
+      "answer": "Lenin, Stalin, Gorbachev, Yeltsin, Putin"
+    },
+    {
+      "question": "What was the treaty that didn’t include representatives of the Soviet Union?",
+      "options": [
+        "The Treaty of Rapallo",
+        "The Treaty of Versailles",
+        "The Brest-Litovsk Treaty",
+        "None of the above"
+      ],
+      "answer": "The Treaty of Versailles"
+    },
+    {
+      "question": "What does the term ‘iron curtain’ refer to?",
+      "options": [
+        "Self-isolation of The Soviet block from the West",
+        "The iron fence around Putin’s palace to keep the journalists away",
+        "Modern Russia cutting off all contact from foreign countries"
+      ],
+      "answer": "Self-isolation of The Soviet block from the West"
+    },
+    {
+      "question": "What were some of the negatives of Khrushchev’s foreign policy?",
+      "options": [
+        "Strained relationships with some countries and Soviet republics",
+        "Increase in number of people fleeing from East Germany to West Germany",
+        "Khrushchev is criticized inside Russia and viewed as a weak leader, causing conflict",
+        "All of the above"
+      ],
+      "answer": "All of the above"
+    },
+    {
+      "question": "Several years after NATO was created, what pact was created to provide mutual military support for the USSR and its allies?",
+      "options": [
+        "The Warsaw Pact",
+        "The Ribbentrop-Molotov Pact",
+        "The Brezhnev Doctrine",
+        "The Khrushchev’s Liberal Thaw Pact"
+      ],
+      "answer": "The Warsaw Pact"
+    },
+    {
+      "question": "The Commonwealth of Independent States was composed of all the former Soviet Republics except for what country?",
+      "options": [
+        "Latvia",
+        "Lithuania",
+        "Estonia",
+        "All of the above"
+      ],
+      "answer": "All of the above"
+    },
+    {
+      "question": "When did Russia start the official military operation in Ukraine?",
+      "options": [
+        "2014",
+        "2019",
+        "2022",
+        "2023"
+      ],
+      "answer": "2022"
+    },
+    {
+      "question": "What is the main target for the Ukrainian drone attacks on the Russian territory?",
+      "options": [
+        "Russian navy",
+        "Kremlin",
+        "oil refineries",
+        "places of big public gatherings"
+      ],
+      "answer": "oil refineries"
+    }
+  ]
+}
