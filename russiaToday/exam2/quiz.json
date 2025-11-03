@@ -14,7 +14,9 @@
         "True",
         "False"
       ],
-      "answer": "False (Correct answer: Boris Yeltsin was the first Russian President.)"
+      "answer": "False",
+      "explanation": "Boris Yeltsin served as the first President of Russia from 1991 to 1999."
+    
     },
     {
       "question": "The leading political party in Russia is United Russia (Putin’s party) and it holds the majority of the seats in the State Duma.",
@@ -30,7 +32,8 @@
         "True",
         "False"
       ],
-      "answer": "False (Correct answer: Russia has two houses—the State Duma and the Council of the Federation.)"
+      "answer": "False",
+      "explanation": "The legislative branch is bicameral, consisting of the State Duma (lower house) and the Council of the Federation (upper house)."
     },
     {
       "question": "Members of the State Duma are elected by popular vote for a period of 5 years.",
@@ -46,7 +49,8 @@
         "True",
         "False"
       ],
-      "answer": "False (Correct answer: The Constitutional Court handles constitutional matters.)"
+      "answer": "False",
+      "explanation": "The Constitutional Court of Russia specifically handles matters concerning the constitution."
     },
     {
       "question": "Archipelago GULAG is a metaphor for a network of prison labor camps.",
@@ -97,12 +101,14 @@
       "answer": "True"
     },
     {
-      "question": "There were about 26.6 million Soviet lives lost in WWII.",
+      "question": "How many Soviet lives were lost during World War II?",
       "options": [
-        "True",
-        "False"
+        "26.6 million",
+        "17.2 million",
+        "8.7 million",
+        "5.4 million"
       ],
-      "answer": "True"
+      "answer": "26.6 million"
     },
     {
       "question": "Russian politicians and the general population of Russia have a preference for autocracy.",
@@ -158,7 +164,8 @@
         "True",
         "False"
       ],
-      "answer": "False (Correct answer: Khrushchev initially sought better relations with the West.)"
+      "answer": "False",
+      "explanation": "Khrushchev initially sought peaceful coexistence with the West."
     },
     {
       "question": "The North Atlantic Treaty Organization was created to provide collective security against the Soviet Union.",
@@ -174,7 +181,8 @@
         "True",
         "False"
       ],
-      "answer": "False (Correct answer: Russia did inherit the USSR’s veto power.)"
+      "answer": "False",
+      "explanation": "Russia inherited the USSR's seat and veto power in the UN Security Council."
     },
     {
       "question": "The systemic opposition is the opposition that does NOT support Putin.",
@@ -182,7 +190,8 @@
         "True",
         "False"
       ],
-      "answer": "False (Correct answer: The systemic opposition supports the current political structure.)"
+      "answer": "False",
+      "explanation": "The systemic opposition consists of parties that operate within the established political system and may support or oppose Putin to varying degrees."
     },
     {
       "question": "Putin’s administration created the Smart Voting App to rig elections through online voting.",
@@ -190,7 +199,8 @@
         "True",
         "False"
       ],
-      "answer": "False (Correct answer: The Smart Voting App was created by opposition leader Alexei Navalny.)"
+      "answer": "False",
+      "explanation": "The Smart Voting App was created by Alexei Navalny's team"
     },
     {
       "question": "Russia officially sent its military forces to annex the Crimea and announce it as Russian territory.",
@@ -222,7 +232,8 @@
         "True",
         "False"
       ],
-      "answer": "False (Correct answer: Navalny is part of the non-systemic opposition.)"
+      "answer": "False",
+      "explanation": "Navalny is part of the non-systemic opposition."
     },
     {
       "question": "In 1999, _________ named Putin the Prime Minister.",

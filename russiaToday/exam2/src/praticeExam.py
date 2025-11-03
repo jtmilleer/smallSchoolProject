@@ -46,6 +46,8 @@ for i, q in enumerate(questions, 1):
         score += 1
     else:
         print(f"Wrong! Correct answer: {q['answer']}")
+    if "explanation" in q:
+        print(f"Explanation: {q['explanation']}")
 
 # Final score
 print(f"\nYour final score: {score}/{i}")

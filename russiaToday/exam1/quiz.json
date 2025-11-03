@@ -116,9 +116,14 @@
       "answer": "False"
     },
     {
-      "question": "Most Russian diamonds come from Sakha.",
-      "options": ["True", "False"],
-      "answer": "True"
+        "question": "Where do most Russian diamonds come from?",
+        "options": [
+            "Sakha",
+            "Surgut",
+            "Novosibirsk",
+            "Vladivostok"
+        ],
+        "answer": "Sakha"
     },
     {
       "question": "Russian Republics have their own...",
@@ -141,9 +146,14 @@
       "answer": "Moscow"
     },
     {
-      "question": "The population of Moscow is approximately 12.4 million.",
-      "options": ["True", "False"],
-      "answer": "True"
+  "question": "What is the approximate population of Moscow?",
+  "options": [
+        "12.4 million",
+        "10.2 million",
+        "15.6 million",
+        "8.9 million"
+    ],
+        "answer": "12.4 million"
     },
     {
       "question": "In rural Russia, villages often have a mix of one-story houses with gardens and 4–5 story apartment blocks.",
@@ -206,9 +216,14 @@
       "answer": "True"
     },
     {
-      "question": "Traditional early Russian way of life emphasized agriculture, hunting, and beekeeping.",
-      "options": ["True", "False"],
-      "answer": "True"
+        "question": "Which activities were emphasized in traditional early Russian life?",
+        "options": [
+            "Agriculture, hunting, and beekeeping",
+            "Industry and trade",
+            "Fishing and shipbuilding",
+            "Mining and metallurgy"
+        ],
+        "answer": "Agriculture, hunting, and beekeeping"
     },
     {
       "question": "Defending land was a frequent necessity in early Russia.",
@@ -274,6 +289,16 @@
       "question": "Ivan IV died without an heir.",
       "options": ["True", "False"],
       "answer": "False"
+    },
+    {
+        "question": "What is the Russian word for 'close friend'?",
+        "options": [
+        "drug",
+        "semya",
+        "sosed",
+        "kollega"
+        ],
+        "answer": "drug"
     }
   ]
 }
