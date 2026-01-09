@@ -1,0 +1,8 @@
+sleeper/
+*.env
+leetcodeDebug/
+spotify/
+CIEReadingFixer/out
+CIEReadingFixer/.idea
+CIEReadingFixer/reading*/
+

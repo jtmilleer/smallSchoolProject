@@ -462,6 +462,276 @@
         "places of big public gatherings"
       ],
       "answer": "oil refineries"
+    },
+    {
+    "question": "Which Russian city hosted the 2014 Winter Olympics and is known for its subtropical climate on the Black Sea coast?",
+    "options": ["Moscow", "Sochi", "Rostov-on-Don", "Norilsk"],
+    "answer": "Sochi"
+    },
+    {
+      "question": "True or False: Norilsk is one of the northernmost cities in the world and suffers from extreme pollution due to mining.",
+      "options": ["True", "False"],
+      "answer": "True"
+    },
+    {
+      "question": "Rostov-on-Don is located near which major body of water?",
+      "options": ["The Baltic Sea", "The Caspian Sea", "The Black Sea", "Lake Baikal"],
+      "answer": "The Black Sea"
+    },
+    {
+      "question": "What separates Big Diomede Island from Little Diomede Island?",
+      "options": ["The Arctic Circle", "The Bering Strait", "The Ural Mountains", "The Gulf of Finland"],
+      "answer": "The Bering Strait"
+    },
+    {
+      "question": "True or False: Big Diomede belongs to Russia while Little Diomede belongs to the United States.",
+      "options": ["True", "False"],
+      "answer": "True"
+    },
+    {
+      "question": "Which city is known for being built entirely on permafrost and inaccessible by road to the rest of Russia?",
+      "options": ["Norilsk", "Sochi", "Rostov-on-Don", "Murmansk"],
+      "answer": "Norilsk"
+    },
+    {
+      "question": "What is a defining feature of the Russian political mindset?",
+      "options": ["Preference for decentralized power", "Trust in grassroots democracy", "Emphasis on strong centralized authority", "Focus on separation of powers"],
+      "answer": "Emphasis on strong centralized authority"
+    },
+    {
+      "question": "True or False: The Russian Constitution divides power into three branches—executive, legislative, and judicial.",
+      "options": ["True", "False"],
+      "answer": "True"
+    },
+    {
+      "question": "What was the goal of Lenin’s Red Terror compared to Stalin’s Great Purge?",
+      "options": ["Lenin targeted military generals, Stalin targeted monarchists", "Lenin targeted political opponents, Stalin expanded terror to civilians and his own party", "Both focused solely on foreign enemies", "Stalin’s terror was smaller in scale"],
+      "answer": "Lenin targeted political opponents, Stalin expanded terror to civilians and his own party"
+    },
+    {
+      "question": "What does the term 'Gulag' refer to?",
+      "options": ["A secret police agency", "A network of labor camps", "A revolutionary army", "A Soviet political party"],
+      "answer": "A network of labor camps"
+    },
+    {
+      "question": "True or False: The Archipelago Gulag was a single camp located near Moscow.",
+      "options": ["True", "False"],
+      "answer": "False"
+    },
+    {
+      "question": "Which branch of power enforces laws in the Russian Federation?",
+      "options": ["Legislative", "Judicial", "Executive", "Federal Assembly"],
+      "answer": "Executive"
+    },
+    {
+      "question": "Who approves or rejects laws passed by the State Duma?",
+      "options": ["The Constitutional Court", "The President", "The Council of the Federation", "The Supreme Court"],
+      "answer": "The Council of the Federation"
+    },
+    {
+      "question": "True or False: The Russian judicial branch is fully independent and modeled after the U.S. system.",
+      "options": ["True", "False"],
+      "answer": "False"
+    },
+    {
+      "question": "Which party has historically dominated the State Duma?",
+      "options": ["Communist Party", "Liberal Democratic Party", "United Russia", "A Just Russia"],
+      "answer": "United Russia"
+    },
+    {
+      "question": "How does the Russian judicial system differ from the U.S.?",
+      "options": ["Judges are elected", "There is no constitutional review", "Courts are less independent and politically influenced", "It has no criminal courts"],
+      "answer": "Courts are less independent and politically influenced"
+    },
+    {
+      "question": "True or False: The president of Russia can dissolve the State Duma under certain conditions.",
+      "options": ["True", "False"],
+      "answer": "True"
+    },
+    {
+      "question": "What year did Vladimir Putin first become president of Russia?",
+      "options": ["1991", "1999", "2000", "2004"],
+      "answer": "2000"
+    },
+    {
+      "question": "Which event is commonly associated with a spike in Putin’s popularity?",
+      "options": ["2008 financial crisis", "Annexation of Crimea", "Fall of the Soviet Union", "Navalny protests"],
+      "answer": "Annexation of Crimea"
+    },
+    {
+      "question": "True or False: Medvedev’s presidency was seen as a continuation of Putin’s power through political rotation.",
+      "options": ["True", "False"],
+      "answer": "True"
+    },
+    {
+      "question": "Who is Alexei Navalny?",
+      "options": ["A pro-Kremlin journalist", "An opposition leader and anti-corruption activist", "The Russian Prime Minister", "A former KGB official"],
+      "answer": "An opposition leader and anti-corruption activist"
+    },
+    {
+      "question": "What is the goal of the Smart Voting app?",
+      "options": ["Encourage voting for Putin", "Coordinate protest rallies", "Promote candidates most likely to defeat United Russia", "Collect voter data for the Kremlin"],
+      "answer": "Promote candidates most likely to defeat United Russia"
+    },
+    {
+      "question": "True or False: The systemic opposition in Russia operates legally within the framework allowed by the Kremlin.",
+      "options": ["True", "False"],
+      "answer": "True"
+    },
+    {
+      "question": "In 2024, what major difference existed in the Russian presidential election compared to previous ones?",
+      "options": ["Putin did not run", "Online and remote voting expanded", "The Duma was abolished", "Term limits were removed"],
+      "answer": "Online and remote voting expanded"
+    },
+    {
+      "question": "What happened to Navalny after returning to Russia from Germany?",
+      "options": ["He was elected to parliament", "He was imprisoned", "He became Prime Minister", "He fled again to Europe"],
+      "answer": "He was imprisoned"
+    },
+    {
+      "question": "Which period of terror came first?",
+      "options": ["Stalin’s Great Purge", "Lenin’s Red Terror"],
+      "answer": "Lenin’s Red Terror"
+    },
+    {
+      "question": "True or False: Stalin’s Great Purge mainly targeted enemies outside the Communist Party.",
+      "options": ["True", "False"],
+      "answer": "False"
+    },
+    {
+      "question": "What was the purpose of the Treaty of Brest-Litovsk?",
+      "options": ["To end World War I between Russia and Germany", "To form NATO", "To establish the Warsaw Pact", "To end the Cold War"],
+      "answer": "To end World War I between Russia and Germany"
+    },
+    {
+      "question": "Which treaty officially recognized the Soviet Union as a diplomatic partner with Germany after WWI?",
+      "options": ["Treaty of Versailles", "Treaty of Rapallo", "Munich Agreement", "Ribbentrop-Molotov Pact"],
+      "answer": "Treaty of Rapallo"
+    },
+    {
+      "question": "What was the significance of the Munich Agreement of 1938?",
+      "options": ["It divided Poland", "It allowed Hitler to annex parts of Czechoslovakia", "It created the Soviet bloc", "It ended WWII"],
+      "answer": "It allowed Hitler to annex parts of Czechoslovakia"
+    },
+    {
+      "question": "True or False: The Ribbentrop-Molotov Pact included a secret protocol to divide Eastern Europe.",
+      "options": ["True", "False"],
+      "answer": "True"
+    },
+    {
+      "question": "How did Khrushchev’s foreign policy differ from Stalin’s?",
+      "options": ["It was more aggressive", "It promoted peaceful coexistence with the West", "It focused only on Asia", "It sought isolation"],
+      "answer": "It promoted peaceful coexistence with the West"
+    },
+    {
+      "question": "What was the Brezhnev Doctrine?",
+      "options": ["A policy allowing intervention in socialist states to preserve communism", "A plan for nuclear disarmament", "A trade pact with China", "A peace agreement with NATO"],
+      "answer": "A policy allowing intervention in socialist states to preserve communism"
+    },
+    {
+      "question": "True or False: Gorbachev supported the fall of the Berlin Wall.",
+      "options": ["True", "False"],
+      "answer": "True"
+    },
+    {
+      "question": "What was the purpose of the Marshall Plan?",
+      "options": ["Rebuild Europe after WWII", "Finance Soviet industrialization", "Unify the USSR", "Expand communism"],
+      "answer": "Rebuild Europe after WWII"
+    },
+    {
+      "question": "After the USSR dissolved, what organization was created by former Soviet republics?",
+      "options": ["Warsaw Pact", "Commonwealth of Independent States", "Eurasian Economic Union", "NATO"],
+      "answer": "Commonwealth of Independent States"
+    },
+    {
+      "question": "True or False: Putin’s post-2003 foreign policy emphasized restoring Russia’s global influence.",
+      "options": ["True", "False"],
+      "answer": "True"
+    },
+    {
+      "question": "Which event symbolized a low point in U.S.–Russia relations after the Cold War?",
+      "options": ["The Syrian Civil War", "Annexation of Crimea", "The Yeltsin economic reforms", "Signing of START treaty"],
+      "answer": "Annexation of Crimea"
+    },
+    {
+      "question": "When did the annexation of Crimea occur?",
+      "options": ["2012", "2013", "2014", "2015"],
+      "answer": "2014"
+    },
+    {
+      "question": "True or False: Russian soldiers entered Crimea without insignia to hide their identity.",
+      "options": ["True", "False"],
+      "answer": "True"
+    },
+    {
+      "question": "What was one result of the annexation of Crimea?",
+      "options": ["Ukraine joined NATO", "Russia faced international sanctions", "Putin resigned", "Crimea became independent"],
+      "answer": "Russia faced international sanctions"
+    },
+    {
+      "question": "How long did the Donbas conflict last before the 2022 invasion?",
+      "options": ["4 years", "6 years", "8 years", "10 years"],
+      "answer": "8 years"
+    },
+    {
+      "question": "Which two countries received the majority of Ukrainian refugees at the start of the 2022 war?",
+      "options": ["Poland and Hungary", "Belarus and Latvia", "Germany and France", "Moldova and Romania"],
+      "answer": "Poland and Hungary"
+    },
+    {
+      "question": "When did Russia launch its full-scale invasion of Ukraine?",
+      "options": ["January 2022", "February 2022", "March 2022", "May 2022"],
+      "answer": "February 2022"
+    },
+    {
+      "question": "True or False: The 2022 invasion led to both economic decline and increased domestic nationalism in Russia.",
+      "options": ["True", "False"],
+      "answer": "True"
+    },
+    {
+      "question": "Which sector of the Russian economy was most heavily affected by Western sanctions?",
+      "options": ["Agriculture", "Technology and banking", "Tourism", "Education"],
+      "answer": "Technology and banking"
+    },
+    {
+      "question": "What was one unintended positive effect of sanctions on Russia?",
+      "options": ["Strengthened domestic production", "Collapse of the ruble", "Mass emigration", "Loss of allies"],
+      "answer": "Strengthened domestic production"
+    },
+    {
+      "question": "True or False: Foreign companies completely stopped doing business in Russia after 2022.",
+      "options": ["True", "False"],
+      "answer": "False"
+    },
+    {
+      "question": "What was the main purpose of the Ribbentrop-Molotov Pact’s secret clauses?",
+      "options": ["Divide Poland and Eastern Europe", "Plan for nuclear disarmament", "Establish trade routes", "Support Yugoslavia"],
+      "answer": "Divide Poland and Eastern Europe"
+    },
+    {
+      "question": "What was Khrushchev’s policy of 'de-Stalinization' mainly focused on?",
+      "options": ["Strengthening Stalin’s legacy", "Reducing repression and political terror", "Restoring the monarchy", "Expanding the Gulag"],
+      "answer": "Reducing repression and political terror"
+    },
+    {
+      "question": "Which event most damaged Putin’s approval ratings?",
+      "options": ["Pension reform protests", "Annexation of Crimea", "Victory Day celebrations", "Syria intervention"],
+      "answer": "Pension reform protests"
+    },
+    {
+      "question": "True or False: Navalny’s investigations revealed corruption among top Russian officials.",
+      "options": ["True", "False"],
+      "answer": "True"
+    },
+    {
+      "question": "The Commonwealth of Independent States primarily aimed to:",
+      "options": ["Create a new union similar to the USSR", "Coordinate policies between post-Soviet states", "Replace the European Union", "Integrate NATO members"],
+      "answer": "Coordinate policies between post-Soviet states"
+    },
+    {
+      "question": "Which of the following is NOT one of the three branches of Russian state power?",
+      "options": ["Executive", "Judicial", "Legislative", "Military"],
+      "answer": "Military"
     }
   ]
 }
