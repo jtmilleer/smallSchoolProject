@@ -1,0 +1,1291 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YRTSFVEKYS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YRTSFVEKYS');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LetterChain</title>
+
+<style>
+/* ===== GLOBAL PAGE ===== */
+body {
+  background: #0f1220;
+  color: #e9ebff;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== TOP APP NAV (NEW, SAFE) ===== */
+.app-nav {
+  position: sticky;      /* keeps it visible at the top while scrolling */
+  top: 0;                /* stick to top */
+  z-index: 100;          /* above other content */
+  background: #0f1220;   /* match your app background */
+  padding: 12px 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);  /* subtle shadow for separation */
+}
+
+.app-nav-inner {
+  max-width: 550px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-nav h1 {
+  margin: 0;
+  font-size: 20px;
+  color: #ffd36a;
+}
+
+.app-nav a {
+  color: #e9ebff;
+  text-decoration: none;
+  margin-left: 12px;
+  font-size: 14px;
+}
+
+.app-nav a:hover {
+  color: #ffd36a;
+}
+
+/* ===== CENTER APP (UNCHANGED BEHAVIOR) ===== */
+.app-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+}
+
+/* ===== ORIGINAL CSS (UNCHANGED) ===== */
+h2 ,h3{
+  color: #ffd36a;
+  margin-top: 0;
+}
+
+.app {
+  width: 100%;
+  max-width: 550px;
+  background: #171a2e;
+  border-radius: 16px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.cell { 
+  aspect-ratio: 1; 
+  background: #232651; 
+  border-radius: 10px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  font-weight: 700; 
+  font-size: 22px; 
+  cursor: pointer; 
+  user-select: none; 
+}
+
+.cell.bonus-double { 
+  background: linear-gradient(135deg, #5a9eff, #4680c8);
+  box-shadow: 0 0 8px rgba(74,120,194,0.6);
+}
+
+.cell.bonus-triple { 
+  background: linear-gradient(135deg, #36a64f, #2b8a3b);
+  box-shadow: 0 0 8px rgba(54,166,79,0.6);
+}
+
+.cell.disabled {
+  opacity: 0.15;
+  text-decoration: line-through;
+  cursor: not-allowed;
+  background: linear-gradient(135deg, #ff1026, #12153a);
+}
+
+.panel {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.next-letters {
+  display: flex;
+  gap: 8px;
+}
+
+.tile-preview {
+  width: 36px; 
+  height: 36px; 
+  background: #232651; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  border-radius: 8px; 
+  font-weight: bold;
+}
+
+.tile-preview.next {
+  outline: 3px solid #ffd36a;
+  box-shadow: 0 0 10px rgba(255, 211, 106, 0.7);
+}
+
+.scoreboard {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+#optimalScore, #percentile {
+  font-weight: bold;
+  color: #ffd36a;
+}
+
+.word-search {
+  margin-top: 30px;
+  text-align: center;
+}
+
+#searchInput {
+  width: 80%;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+}
+
+#searchResults {
+  margin-top: 8px;
+  max-height: 150px;
+  overflow-y: auto;
+  text-align: left;
+  color: #ffd36a;
+  font-size: 14px;
+}
+
+.rules {
+  margin-top: 30px;
+  background: #171a2e;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+
+
+@media (max-width: 480px) {
+  .next-letters {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+    justify-items: center;
+  }
+
+  .tile-preview {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* ===== RULES ACCORDION ===== */
+.rules details {
+  background: #1e2142;
+  border-radius: 10px;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.rules summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: #ffd36a;
+  list-style: none;
+}
+
+.rules summary::marker {
+  display: none;
+}
+
+.rules summary::after {
+  content: "▸";
+  float: right;
+  transition: transform 0.2s ease;
+}
+
+.rules details[open] summary::after {
+  transform: rotate(90deg);
+}
+
+.rules details ul {
+  margin-top: 8px;
+}
+
+.rules .accordion-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 250ms ease, opacity 200ms ease;
+  opacity: 0;
+}
+
+.rules details[open] .accordion-content {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.rules .accordion-content > * {
+  overflow: hidden;
+}
+
+#resetButton {
+  background: linear-gradient(135deg, #ffd36a, #e0b600); /* gold gradient */
+  color: #0f1220; /* dark text for contrast */
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  transition: transform 0.1s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+#resetButton:hover {
+  background: linear-gradient(135deg, #ffe17a, #f1c800); /* slightly lighter gold */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.5);
+  transform: translateY(-2px);
+}
+
+#resetButton:active {
+  transform: translateY(1px);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+}
+
+.app-nav a.current {
+  color: #ffd36a;           /* gold highlight */
+  font-weight: bold;         /* optional: bold for emphasis */
+}
+
+
+</style>
+</head>
+
+<body>
+
+<!-- NEW APP-LIKE NAV -->
+<nav class="app-nav">
+  <div class="app-nav-inner">
+    <a href="index.html"><h1>LetterChain</h1></a>
+    <div>
+      <a href="index.html" class="current">Play</a>
+      <a href="challenge.html">Challenge</a>
+      <a href="tutorial.html">Tutorial</a>
+    </div>
+  </div>
+</nav>
+
+<!-- GAME (UNCHANGED STRUCTURE) -->
+<div class="app-wrapper">
+  <div class="app">
+
+    <header>
+      <h1>LetterChain</h1>
+      <div>✨ Your Score: <span id="score">0</span> ✨</div>
+    </header>
+
+    <div class="board" id="board"></div>
+
+    <div class="panel">
+      <div class="next-letters" id="nextLetters"></div>
+    </div>
+
+    <div class="scoreboard">
+      <div id="scoreboard">Words you've made:</div>
+      Best Known Score: <span id="optimalScore">0</span> 🏆<br>
+      You’re beating <span id="percentile">0</span>% of potential boards today! 🚀
+    </div>
+
+    <div style="text-align:center; margin-bottom:12px;">
+      <button id="resetButton">Reset Board</button>
+    </div>
+
+    <div class="word-search">
+      <input type="text" id="searchInput" placeholder="Search for your next word...">
+      <div id="searchResults"></div>
+    </div>
+
+    <!-- RULES (unchanged content) -->
+<div class="rules">
+	<details>
+	<summary>How to Play</summary>
+	<div class="accordion-content">
+    <ul>
+      <li>Place the letters in order from left to right. 🖐️ No skipping or shuffling of letters is allowed.</li>
+      <li>Once letters are placed, you cannot move them.</li>
+      <li>Only words that are 3, 4 or 5 letters long will score points.</li>
+      <li>Words score horizontally, vertically, diagonally, forwards and backwards. Longer words also score the smaller words inside of them. For example, THERE scores THE, HER, HERE, ERE (forwards), ERE (backwards).</li>
+      <li>Once a cell scores points with a word, it’s locked! 🔒 Those locked letters cannot be used for future words. Plan carefully. Don’t score too soon!</li>
+      <li>Click on Tutorial on top for more details.</li>
+     </ul>
+     </div>
+     </details>
+    
+    <details>
+    <summary>Scoring</summary>
+    <div class="accordion-content">
+    <ul>
+      <li><strong>Basic Points:</strong>
+        <ul>
+          <li>3 letters = 4 pts</li>
+          <li>4 letters = 7 pts</li>
+          <li>5 letters = 13 pts</li>
+        </ul>
+      </li>
+      <li><strong>Bonus Tiles:</strong>
+        <ul>
+		  <li>
+  <span style="display:inline-block;width:16px;height:16px;background:linear-gradient(135deg, #5a9eff, #4680c8);border-radius:4px;margin-right:6px;vertical-align:middle;"></span>
+  <strong>Double Bonus (Light Blue)</strong> – Worth 2×
+</li>
+<li>
+  <span style="display:inline-block;width:16px;height:16px;background:linear-gradient(135deg, #36a64f, #2b8a3b);border-radius:4px;margin-right:6px;vertical-align:middle;"></span>
+  <strong>Triple Bonus (Green)</strong> – Worth 3×
+</li>
+        </ul>
+      </li>
+      <li><strong>Advanced Scoring:</strong>
+        <ul>
+          <li>2 or more <strong>5-letter words only</strong>: +75 pts</li>
+          <li>2 or more <strong>4-letter words only</strong>: +50 pts</li>
+          <li>3 or more <strong>3-letter words only</strong>: +25 pts</li>
+          <li>Words inside of words matter for advanced scoring. CHAT is counted as a 4-letter word (CHAT) and a 3-letter word (HAT).</li>
+          <li>Any tiles left over at the end: -4 points each. ⚠️</li>
+        </ul>
+      </li>
+    </ul>
+    </div>
+    </details>
+    
+    <details>
+         <summary>Scoring Challenge</summary>
+             <div class="accordion-content">
+     <ul>
+      <li>You can reset as often as you like to play the same letters/board again. New letters and a new board are generated daily.</li>
+      <li>Every day, be the first to beat the "Best Known Score" and I will send you at least $10.24. Click on the Challenge link on top for details.</li>
+    </ul>
+    </div>
+    </details>
+  </div>
+
+  </div>
+</div>
+
+<script>
+const SIZE = 5;
+const TOTAL_LETTERS = 12;
+let board = Array(SIZE*SIZE).fill(null);
+let disabled = Array(SIZE*SIZE).fill(false);
+let score = 0;
+let wordsMade = [];
+let move = 0;
+
+// Read letters and bonus from a file for daily letters (placeholder here)
+let dailyLetters = ['T','H','E','R','E','A','N','D','I','S','O','F'];
+let bonusCells = [1,2,3,4,5];
+
+let scoreToPercent = new Map();
+
+function calculatePercentages(dailyInfo) {
+    const optimalScoreEl = document.getElementById('optimalScore');
+
+    // Parse dailyInfo into { score, count }
+    const parsed = dailyInfo.map(str => {
+        const match = str.match(/\((-?\d+),(\d+)\)/);
+        return {
+            score: Number(match[1]),
+            count: Number(match[2])
+        };
+    });
+
+    // Sort ASCENDING by score
+    parsed.sort((a, b) => a.score - b.score);
+
+    const totalConfigs = parsed.reduce((sum, item) => sum + item.count, 0);
+
+    // Optimal score = highest score, change 2 to 1 to get true "best known"
+    optimalScoreEl.textContent = `${parsed[parsed.length - 1].score}`;
+
+    // Build score → percentile map
+    scoreToPercent.clear();
+
+    let cumulativeBelow = 0;
+
+    for (const { score, count } of parsed) {
+        const percentile = (cumulativeBelow / totalConfigs) * 100;
+
+        // Store percentile for this exact score
+        scoreToPercent.set(score, percentile);
+
+        cumulativeBelow += count;
+    }
+}
+
+/**
+ * HEADLESS ENGINE
+ * Calculates the score of a board state without updating the GUI.
+ */
+// --- HEADLESS ENGINE (PURE LOGIC) ---
+
+// Helper: Calculate score for a specific board state
+function getVirtualScore(testBoard) {
+    let vScore = 0;
+    let vDisabled = new Set(); // Track used cells
+    let vWordsMade = []; // Track lengths for advanced bonuses
+
+    // Helper to score a specific word found on the virtual board
+    const scoreSeq = (indices) => {
+        // 1. Check if valid word
+        const letters = indices.map(i => testBoard[i]);
+        if (letters.some(l => l === null)) return; // Incomplete
+        
+        const word = letters.join('');
+        const rev = letters.slice().reverse().join('');
+        
+        let valid = false;
+        let isRev = false;
+
+        if (DICTIONARY.has(word)) valid = true;
+        else if (DICTIONARY.has(rev)) { valid = true; isRev = true; }
+
+        if (!valid) return;
+
+        // 2. Check if already used
+        // In this game, if ANY cell in the sequence is disabled, the word might not count 
+        // depending on strictness, but usually, we just track if the *word instance* was claimed.
+        // For this solver, we assume if we find it, we take it, then disable cells.
+        // (Simplification: If current path has used cells, we skip. Real game logic allows overlap 
+        // UNLESS the cell was disabled by a previous word. Since we check lengths 5->4->3, 
+        // higher lengths take priority).
+        
+        if (indices.some(i => vDisabled.has(i))) return; 
+
+        // 3. Calculate Points
+        let base = (indices.length === 5) ? 13 : (indices.length === 4) ? 7 : 4;
+        let mult = 1;
+        indices.forEach(i => {
+            if (bonusCells.includes(i)) {
+                mult *= (bonusCells.indexOf(i) === 4) ? 3 : 2;
+            }
+        });
+        
+        vScore += (base * mult);
+        vWordsMade.push(indices.length);
+        
+        // 4. Disable cells
+        indices.forEach(i => vDisabled.add(i));
+    };
+
+    // --- CHECK ALL PATTERNS (Order: 5, 4, 3) ---
+    const lengths = [5, 4, 3];
+    
+    // Pre-calculated Diagonal Paths
+    const diags5 = [[0,6,12,18,24], [4,8,12,16,20]];
+    const diags4 = [
+        [0,6,12,18], [1,7,13,19], [6,12,18,24], [5,11,17,23], // \
+        [3,7,11,15], [4,8,12,16], [8,12,16,20], [9,13,17,21]  // /
+    ];
+    const diags3 = [
+        [0,6,12], [1,7,13], [2,8,14], [5,11,17], [6,12,18], [7,13,19], [10,16,22], [11,17,23], [12,18,24], // \
+        [2,6,10], [3,7,11], [4,8,12], [7,11,15], [8,12,16], [9,13,17], [12,16,20], [13,17,21], [14,18,22]  // /
+    ];
+
+    lengths.forEach(len => {
+        // Rows
+        for (let r=0; r<SIZE; r++) {
+            for (let c=0; c<=SIZE-len; c++) {
+                let seq = [];
+                for(let k=0; k<len; k++) seq.push(r*SIZE + c + k);
+                scoreSeq(seq);
+            }
+        }
+        // Cols
+        for (let c=0; c<SIZE; c++) {
+            for (let r=0; r<=SIZE-len; r++) {
+                let seq = [];
+                for(let k=0; k<len; k++) seq.push((r+k)*SIZE + c);
+                scoreSeq(seq);
+            }
+        }
+        // Diagonals
+        if (len===5) diags5.forEach(d => scoreSeq(d));
+        if (len===4) diags4.forEach(d => scoreSeq(d));
+        if (len===3) diags3.forEach(d => scoreSeq(d));
+    });
+
+    // --- ADVANCED BONUSES ---
+    const c3 = vWordsMade.filter(l => l===3).length;
+    const c4 = vWordsMade.filter(l => l===4).length;
+    const c5 = vWordsMade.filter(l => l===5).length;
+
+    if (c5 >= 2 && c4===0 && c3===0) vScore += 75;
+    else if (c4 >= 2 && c5===0 && c3===0) vScore += 50;
+    else if (c3 >= 3 && c5===0 && c4===0) vScore += 25;
+
+    // --- PENALTY & HEURISTICS ---
+    let occupied = testBoard.filter(x => x !== null).length;
+    let leftover = testBoard.filter((val, i) => val !== null && !vDisabled.has(i)).length;
+    
+    // Real Game Penalty
+    vScore -= (leftover * 4);
+
+    // *** CRITICAL HEURISTIC FOR SOLVER ***
+    // If the score is 0, we guide the solver to group letters and hit bonuses.
+    // Otherwise, it places tiles randomly.
+    if (vScore <= 0) {
+        let heuristic = 0;
+        testBoard.forEach((val, i) => {
+            if (val) {
+                // Reward center
+                if ([6,7,8,11,12,13,16,17,18].includes(i)) heuristic += 2;
+                // Reward bonus tiles
+                if (bonusCells.includes(i)) heuristic += 3;
+                // Reward adjacency (being next to another letter)
+                // (Simplified check: look right and down)
+                if (i+1 < 25 && testBoard[i+1]) heuristic += 5;
+                if (i+5 < 25 && testBoard[i+5]) heuristic += 5;
+            }
+        });
+        // We add heuristic as a tiny fraction so it decides ties, 
+        // but never overrides a real point score.
+        vScore += (heuristic * 0.001);
+    }
+
+    return vScore;
+}
+
+// Paste this inside the <script> tag of index_nonfinal.html
+
+function getVirtualScoreWithHeuristics(testBoard) {
+    // 1. Calculate Real Score (Using your existing logic logic)
+    // (This calls the strict function that checks lines/diags/bonuses)
+    let realScore = getVirtualScore(testBoard); // Assuming you renamed the logic from my previous message
+
+    // 2. If we have a good score, trust it completely.
+    if (realScore > 10) return realScore;
+
+    // 3. THE HEURISTIC (Break ties when score is 0)
+    // We give tiny fractional points for "Potential"
+    let potential = 0;
+
+    // A. Bonus Tile Control
+    testBoard.forEach((l, i) => {
+        if (l && bonusCells.includes(i)) potential += 0.5;
+        if (l && [6,7,8,11,12,13,16,17,18].includes(i)) potential += 0.2;
+    });
+
+    // B. "Fragment" Analysis (The Secret Sauce)
+    // We look at every row/col. If it forms a valid START of a word, we reward it.
+    // Example: "TH" gets points because "THE..." exists. "QX" gets 0.
+    
+    const checkFragment = (letters) => {
+        if (letters.length < 2) return;
+        const str = letters.join('');
+        // We cheat slightly: check if this string is in our huge string of all words
+        // OR better: iterate dictionary (slow) 
+        // FASTEST: Just check if it's a known valid sub-string (partial match)
+        
+        // Since we don't have a trie, we do a quick check:
+        // Reward if 2 letters are next to each other
+        potential += 0.1; 
+    };
+
+    // Scan Rows for adjacencies
+    for(let r=0; r<SIZE; r++) {
+        for(let c=0; c<SIZE-1; c++) {
+            let i = r*SIZE+c;
+            if (testBoard[i] && testBoard[i+1]) potential += 0.5; // Adjacent horizontal
+        }
+    }
+    // Scan Cols for adjacencies
+    for(let c=0; c<SIZE; c++) {
+        for(let r=0; r<SIZE-1; r++) {
+            let i = r*SIZE+c;
+            if (testBoard[i] && testBoard[i+SIZE]) potential += 0.5; // Adjacent vertical
+        }
+    }
+
+    // Return combined score
+    // Real score is integer, potential is fractional.
+    // This ensures 1 real point is always better than 0.99 potential points.
+    return realScore + potential;
+}
+
+async function loadDailyData() {
+    const now = new Date();
+    const day = now.getDate();
+    const month = now.getMonth() + 1; // months are 0-indexed
+    const year = now.getFullYear();
+
+    // Filenames
+    const lettersFile = `data/${day.toString().padStart(2,'0')}${month.toString().padStart(2,'0')}${year}_letters.txt`;
+    const boardFile   = `data/${day.toString().padStart(2,'0')}${month.toString().padStart(2,'0')}${year}_board.txt`;
+    const infoFile    = `data/${day.toString().padStart(2,'0')}${month.toString().padStart(2,'0')}${year}Solution.txt`;
+
+    try {
+        // --- Load letters ---
+        const lettersResponse = await fetch(lettersFile);
+        if (!lettersResponse.ok) throw new Error(`Failed to load ${lettersFile}`);
+        const lettersText = await lettersResponse.text();
+
+        dailyLetters = lettersText
+            .split(',')
+            .map(l => l.trim().toUpperCase())
+            .filter(Boolean);
+
+        // --- Load board / bonus cells ---
+        const boardResponse = await fetch(boardFile);
+        if (!boardResponse.ok) throw new Error(`Failed to load ${boardFile}`);
+        const boardText = await boardResponse.text();
+
+        const boardValues = boardText
+            .split(',')
+            .map(n => parseInt(n.trim(), 10))
+            .filter(n => !isNaN(n));
+
+        bonusCells = [];
+        tripleCell = -1;
+        boardValues.forEach((value, index) => {
+            if (value === 2) bonusCells.push(index);  // add to bonus list
+            if (value === 3) tripleCell = index;
+        });
+        // Now add indices with value 3 to the **end**
+        bonusCells.push(tripleCell);
+        
+        const infoResponse = await fetch(infoFile);
+        if (!infoResponse.ok) throw new Error(`Failed to load ${infoFile}`);
+        const infoText = await infoResponse.text();
+            
+        dailyInformation = infoText
+			.split('\n')                         // split by line
+			.map(line => line.trim())            // remove whitespace
+			.filter(line => line)                // remove empty lines
+			.map(line => {
+				// split by spaces
+				const parts = line.split(/\s+/);
+				let points = parts[0].replace(/[:;]/g, ''); // remove colon/semicolon
+				let count = parts[1];                        // second value
+				return `(${points},${count})`;              // exact string format expected
+			});
+
+    } catch (err) {
+        console.error(err);
+    }
+}
+
+
+loadDailyData().then(() => {
+    // You can use dailyLetters here safely
+    setupEverything();
+});
+
+const boardEl = document.getElementById('board');
+const scoreEl = document.getElementById('score');
+const nextLettersEl = document.getElementById('nextLetters');
+const scoreboardEl = document.getElementById('scoreboard');
+
+function setupEverything(){
+	// Setup board	
+	calculatePercentages(dailyInformation);
+	
+	loadDictionary();
+	renderBoard();
+	renderNextLetters();
+
+	const searchInput = document.getElementById('searchInput');
+	const searchResults = document.getElementById('searchResults');
+
+	searchInput.addEventListener('input', () => {
+		const query = searchInput.value.trim().toUpperCase();
+		searchResults.innerHTML = '';
+
+		if (query.length < 3) return; // Only search if 3+ letters
+
+		const matches = Array.from(DICTIONARY).filter(word => word.includes(query)).sort((a, b) => a.length - b.length);
+		matches.slice(0, 50).forEach(word => { // Limit to 50 results
+		    const div = document.createElement('div');
+		    div.textContent = word;
+		    searchResults.appendChild(div);
+		});
+	});
+}
+
+function renderBoard(){
+	boardEl.innerHTML = '';
+	board.forEach((val,i)=>{
+		const cell = document.createElement('div');
+		cell.className = 'cell';
+		if(val !== null) cell.classList.add('filled');
+		if(disabled[i]) cell.classList.add('disabled');
+		if(bonusCells.includes(i) && !disabled[i]){
+			if(bonusCells.indexOf(i) === 4) cell.classList.add('bonus-triple');
+			else cell.classList.add('bonus-double');
+		}
+		cell.textContent = val||'';
+		cell.onclick = ()=>placeLetter(i);
+		boardEl.appendChild(cell);
+	});
+}
+
+function renderNextLetters() {
+	nextLettersEl.innerHTML = '';
+
+	for (let i = 0; i < TOTAL_LETTERS; i++) {
+		const div = document.createElement('div');
+		div.className = 'tile-preview';
+
+		if (i < move) {
+			// Already placed letters → show nothing
+			div.textContent = '';
+			div.style.opacity = '0.4';
+		}
+		else if (i < dailyLetters.length) {
+			// Upcoming letters
+			div.textContent = dailyLetters[i];
+
+			if (i === move) {
+				div.classList.add('next');
+			}
+		}
+		else {
+			// Safety fallback (shouldn't happen)
+			div.textContent = '';
+		}
+
+		nextLettersEl.appendChild(div);
+	}
+}
+
+
+function checkAdvancedBonuses() {
+    const counts = {3:0, 4:0, 5:0};
+    wordsMade.forEach(w => counts[w.word.length]++);
+
+    // 5-letter bonus
+    if (counts[5] >= 2 && counts[3]===0 && counts[4]===0) {
+        score += 75;
+		const bonus = 75;
+        wordsMade.push({ word: '5-letter only bonus', points: bonus });
+    }
+
+    // 4-letter bonus
+    if (counts[4] >= 2 && counts[3]===0 && counts[5]===0) {
+        score += 50;
+		const bonus = 50;
+		wordsMade.push({ word: '4-letter only bonus', points: bonus });
+    }
+
+    // 3-letter bonus
+    if (counts[3] >= 3 && counts[4]===0 && counts[5]===0) {
+        score += 25;
+		const bonus = 25;
+		wordsMade.push({ word: '3-letter only bonus', points: bonus });
+    }
+
+    // Penalty for leftover tiles
+    const leftoverTiles = board.filter((v,i)=>v && !disabled[i]).length;
+    if (leftoverTiles > 0) {
+        score -= leftoverTiles * 4;
+		const penalty = -1 * leftoverTiles * 4;
+		wordsMade.push({ word: leftoverTiles+' unused tiles penalty', points: penalty });
+    }
+}
+
+
+function placeLetter(idx){
+	if (board[idx] !== null) return;
+	if(disabled[idx] || move>=dailyLetters.length) return;
+	board[idx] = dailyLetters[move];
+	move++;
+	checkWords();
+	renderBoard();
+	renderNextLetters();
+	// Check advanced bonuses if last letter placed
+    if (move === dailyLetters.length) {
+        checkAdvancedBonuses();
+        boardEl.classList.add('no-letters');
+    }
+	updateScoreboard();    
+}
+
+function scoreWord(cells, letters) {
+	const word = letters.join('');
+
+	let base;
+	if (letters.length === 3) base = 4;
+	else if (letters.length === 4) base = 7;
+	else if (letters.length === 5) base = 13;
+	let multiplier = 1;
+
+	cells.forEach(i => {
+		if (bonusCells.includes(i)) {
+			multiplier *= bonusCells.indexOf(i) === 4 ? 3 : 2;
+		}
+	});
+
+	const points = base * multiplier;
+	score += points;
+	wordsMade.push({ word, points });
+}
+
+
+function checkWords() {
+	// Check for 5 lengthed words first
+	const cellsToDisable = new Set();
+	// ROWS
+	for (let r = 0; r < SIZE; r++) {
+		let cells = [];
+		let letters = [];
+
+		for (let c = 0; c < SIZE; c++) {
+			const i = r * SIZE + c;
+			if (!board[i] || disabled[i]) {
+				cells = [];
+				letters = [];
+				break;
+			}
+			cells.push(i);
+			letters.push(board[i]);
+		}
+
+		const word = letters.join('').toUpperCase();
+		const reversed = word.split('').reverse().join('');
+
+		if (letters.length === 5 && DICTIONARY.has(word)) {
+			scoreWord(cells, letters);
+			cells.forEach(i => cellsToDisable.add(i));
+		}
+
+		// backwards
+		if (letters.length === 5 && DICTIONARY.has(reversed)) {
+			scoreWord([...cells].reverse(), [...letters].reverse());
+			cells.forEach(i => cellsToDisable.add(i));
+		}
+	}
+
+	// COLUMNS
+	for (let c = 0; c < SIZE; c++) {
+		let cells = [];
+		let letters = [];
+
+		for (let r = 0; r < SIZE; r++) {
+			const i = r * SIZE + c;
+			if (!board[i] || disabled[i]) {
+				cells = [];
+				letters = [];
+				break;
+			}
+			cells.push(i);
+			letters.push(board[i]);
+		}
+
+		const word = letters.join('').toUpperCase();
+		const reversed = word.split('').reverse().join('');
+
+		if (letters.length === 5 && DICTIONARY.has(word)) {
+			scoreWord(cells, letters);
+			cells.forEach(i => cellsToDisable.add(i));
+		}
+
+		// backwards
+		if (letters.length === 5 && DICTIONARY.has(reversed)) {
+			scoreWord([...cells].reverse(), [...letters].reverse());
+			cells.forEach(i => cellsToDisable.add(i));
+		}
+	}
+	
+	//DIAGONALS
+	// Diagonal \ (top-left → bottom-right)
+	let diag1 = [0, 6, 12, 18, 24];
+	if (diag1.every(i => board[i] && !disabled[i])) {
+
+		let letters1 = diag1.map(i => board[i]);
+		let word1 = letters1.join('').toUpperCase();
+		let reversed1 = word1.split('').reverse().join('');
+
+		if (word1.length === 5 && DICTIONARY.has(word1)) {
+			scoreWord(diag1, letters1);
+			diag1.forEach(i => cellsToDisable.add(i));
+		}
+		if (reversed1.length === 5 && DICTIONARY.has(reversed1)) {
+			scoreWord([...diag1].reverse(), [...letters1].reverse());
+			diag1.forEach(i => cellsToDisable.add(i));
+		}
+	}
+	
+	// Diagonal / (top-right → bottom-left)
+	let diag2 = [4, 8, 12, 16, 20];
+	if (diag2.every(i => board[i] && !disabled[i])) {
+		let letters2 = diag2.map(i => board[i]);
+		let word2 = letters2.join('').toUpperCase();
+		let reversed2 = word2.split('').reverse().join('');
+
+		if (word2.length === 5 && DICTIONARY.has(word2)) {
+			scoreWord(diag2, letters2);
+			diag2.forEach(i => cellsToDisable.add(i));
+		}
+		if (reversed2.length === 5 && DICTIONARY.has(reversed2)) {
+			scoreWord([...diag2].reverse(), [...letters2].reverse());
+			diag2.forEach(i => cellsToDisable.add(i));
+		}
+	}
+		
+	//CHECK FOR 4 LETTER WORDS NEXT
+	// ROWS (4-letter words)
+	for (let r = 0; r < SIZE; r++) {
+		for (let startC = 0; startC <= SIZE - 4; startC++) { // sliding 4-cell window
+			const cells = [];
+			const letters = [];
+			let blocked = false;
+
+			for (let offset = 0; offset < 4; offset++) {
+				const c = startC + offset;
+				const i = r * SIZE + c;
+				if (!board[i] || disabled[i]) {
+					blocked = true;
+					break;
+				}
+				cells.push(i);
+				letters.push(board[i]);
+			}
+
+			if (!blocked) {
+				const word = letters.join('').toUpperCase();
+				const reversed = word.split('').reverse().join('');
+
+				if (DICTIONARY.has(word)) {
+					scoreWord(cells, letters);
+					cells.forEach(i => cellsToDisable.add(i));
+				}
+				if (DICTIONARY.has(reversed)) {
+					scoreWord([...cells].reverse(), [...letters].reverse());
+					cells.forEach(i => cellsToDisable.add(i));
+				}
+			}
+		}
+	}
+
+	// COLUMNS (4-letter words)
+	for (let c = 0; c < SIZE; c++) {
+		for (let startR = 0; startR <= SIZE - 4; startR++) { // sliding vertical window
+			const cells = [];
+			const letters = [];
+			let blocked = false;
+
+			for (let offset = 0; offset < 4; offset++) {
+				const r = startR + offset;
+				const i = r * SIZE + c;
+				if (!board[i] || disabled[i]) {
+					blocked = true;
+					break;
+				}
+				cells.push(i);
+				letters.push(board[i]);
+			}
+
+			if (!blocked) {
+				const word = letters.join('').toUpperCase();
+				const reversed = word.split('').reverse().join('');
+
+				if (DICTIONARY.has(word)) {
+					scoreWord(cells, letters);
+					cells.forEach(i => cellsToDisable.add(i));
+				}
+				if (DICTIONARY.has(reversed)) {
+					scoreWord([...cells].reverse(), [...letters].reverse());
+					cells.forEach(i => cellsToDisable.add(i));
+				}
+			}
+		}
+	}
+
+	// DIAGONALS (4-letter words)
+
+	// \ diagonals
+	const diagBackslashes = [
+		[0, 6, 12, 18], [1, 7, 13, 19], [5, 11, 17, 23], [6, 12, 18, 24]
+	];
+	diagBackslashes.forEach(diag => {
+		if (diag.every(i => board[i] && !disabled[i])) {
+			const letters = diag.map(i => board[i]);
+			const word = letters.join('').toUpperCase();
+			const reversed = word.split('').reverse().join('');
+
+			if (DICTIONARY.has(word)) {
+				scoreWord(diag, letters);
+				diag.forEach(i => cellsToDisable.add(i));
+			}
+			if (DICTIONARY.has(reversed)) {
+				scoreWord([...diag].reverse(), [...letters].reverse());
+				diag.forEach(i => cellsToDisable.add(i));
+			}
+		}
+	});
+
+	// / diagonals
+	const diagSlashes = [
+		[3, 7, 11, 15], [4, 8, 12, 16], [8, 12, 16, 20], [9, 13, 17, 21]
+	];
+	diagSlashes.forEach(diag => {
+		if (diag.every(i => board[i] && !disabled[i])) {
+			const letters = diag.map(i => board[i]);
+			const word = letters.join('').toUpperCase();
+			const reversed = word.split('').reverse().join('');
+
+			if (DICTIONARY.has(word)) {
+				scoreWord(diag, letters);
+				diag.forEach(i => cellsToDisable.add(i));
+			}
+			if (DICTIONARY.has(reversed)) {
+				scoreWord([...diag].reverse(), [...letters].reverse());
+				diag.forEach(i => cellsToDisable.add(i));
+			}
+		}
+	});
+
+	//FINALLY 3 letter words
+	// ROWS (3-letter words)
+	for (let r = 0; r < SIZE; r++) {
+		for (let startC = 0; startC <= SIZE - 3; startC++) { // sliding 3-cell window
+			const cells = [];
+			const letters = [];
+			let blocked = false;
+
+			for (let offset = 0; offset < 3; offset++) {
+				const c = startC + offset;
+				const i = r * SIZE + c;
+				if (!board[i] || disabled[i]) {
+					blocked = true;
+					break;
+				}
+				cells.push(i);
+				letters.push(board[i]);
+			}
+
+			if (!blocked) {
+				const word = letters.join('').toUpperCase();
+				const reversed = word.split('').reverse().join('');
+
+				if (DICTIONARY.has(word)) {
+					scoreWord(cells, letters);
+					cells.forEach(i => cellsToDisable.add(i));
+				}
+				if (DICTIONARY.has(reversed)) {
+					scoreWord([...cells].reverse(), [...letters].reverse());
+					cells.forEach(i => cellsToDisable.add(i));
+				}
+			}
+		}
+	}
+
+	// COLUMNS (3-letter words)
+	for (let c = 0; c < SIZE; c++) {
+		for (let startR = 0; startR <= SIZE - 3; startR++) { // sliding vertical window
+			const cells = [];
+			const letters = [];
+			let blocked = false;
+
+			for (let offset = 0; offset < 3; offset++) {
+				const r = startR + offset;
+				const i = r * SIZE + c;
+				if (!board[i] || disabled[i]) {
+					blocked = true;
+					break;
+				}
+				cells.push(i);
+				letters.push(board[i]);
+			}
+
+			if (!blocked) {
+				const word = letters.join('').toUpperCase();
+				const reversed = word.split('').reverse().join('');
+
+				if (DICTIONARY.has(word)) {
+					scoreWord(cells, letters);
+					cells.forEach(i => cellsToDisable.add(i));
+				}
+				if (DICTIONARY.has(reversed)) {
+					scoreWord([...cells].reverse(), [...letters].reverse());
+					cells.forEach(i => cellsToDisable.add(i));
+				}
+			}
+		}
+	}
+
+	// DIAGONALS (3-letter words)
+
+	// \ diagonals
+	const diagBackslashes3 = [
+		[0, 6, 12], [1, 7, 13], [2, 8, 14],
+		[5, 11, 17], [6, 12, 18], [7, 13, 19],
+		[10, 16, 22], [11, 17, 23], [12, 18, 24]
+	];
+	diagBackslashes3.forEach(diag => {
+		if (diag.every(i => board[i] && !disabled[i])) {
+			const letters = diag.map(i => board[i]);
+			const word = letters.join('').toUpperCase();
+			const reversed = word.split('').reverse().join('');
+
+			if (DICTIONARY.has(word)) {
+				scoreWord(diag, letters);
+				diag.forEach(i => cellsToDisable.add(i));
+			}
+			if (DICTIONARY.has(reversed)) {
+				scoreWord([...diag].reverse(), [...letters].reverse());
+				diag.forEach(i => cellsToDisable.add(i));
+			}
+		}
+	});
+
+	// / diagonals
+	const diagSlashes3 = [
+		[2, 6, 10], [3, 7, 11], [4, 8, 12],
+		[7, 11, 15], [8, 12, 16], [9, 13, 17],
+		[12, 16, 20], [13, 17, 21], [14, 18, 22]
+	];
+	diagSlashes3.forEach(diag => {
+		if (diag.every(i => board[i] && !disabled[i])) {
+			const letters = diag.map(i => board[i]);
+			const word = letters.join('').toUpperCase();
+			const reversed = word.split('').reverse().join('');
+
+			if (DICTIONARY.has(word)) {
+				scoreWord(diag, letters);
+				diag.forEach(i => cellsToDisable.add(i));
+			}
+			if (DICTIONARY.has(reversed)) {
+				scoreWord([...diag].reverse(), [...letters].reverse());
+				diag.forEach(i => cellsToDisable.add(i));
+			}
+		}
+	});
+
+	// Finally disable the used cells
+	cellsToDisable.forEach(i => {
+		disabled[i] = true;
+	});
+}
+
+function updateScoreboard(){
+	scoreEl.textContent = score;
+	scoreboardEl.innerHTML = "Words you've made:  "+wordsMade.map(w=>w.word+' ('+w.points+')').join(', ');
+
+    if (!scoreToPercent.size) return;
+
+    // Clamp to known scores if needed
+    let percentile = scoreToPercent.get(score);
+    let lookupScore = score;
+    
+    while (percentile === undefined && lookupScore > -36) {
+		lookupScore--;
+		percentile = scoreToPercent.get(lookupScore);
+	}
+	
+	if (percentile === undefined || lookupScore <= -36) {
+		percentile = 0;
+	}
+
+    document.getElementById('percentile').textContent =
+        `${percentile.toFixed(1)}`;
+}
+
+let DICTIONARY = new Set();
+
+async function loadDictionary() {
+    try {
+        // Fetch the dictionary.txt file
+        const response = await fetch('dictionary.txt');
+        if (!response.ok) throw new Error("Failed to load dictionary");
+
+        // Read the file as text
+        const text = await response.text();
+
+        // Convert it into a JavaScript Set
+        // Remove quotes and spaces, then split by comma
+        const words = text
+            .split(',')
+            .map(w => w.trim().replace(/^"|"$/g, ''))  // remove quotes
+            .filter(Boolean); // remove empty strings
+
+        DICTIONARY = new Set(words);
+    } catch (err) {
+        console.error(err);
+    }
+}
+
+// RESET FUNCTION
+document.getElementById('resetButton').addEventListener('click', () => {
+    // Reset board array
+    board = Array(SIZE*SIZE).fill(null);
+    disabled = Array(SIZE*SIZE).fill(false);
+    
+    // Reset score, move, words
+    score = 0;
+    wordsMade = [];
+    move = 0;
+    
+    // Re-render everything
+    renderBoard();
+    renderNextLetters();
+    updateScoreboard();
+    
+    // Remove "no-letters" class if present
+    boardEl.classList.remove('no-letters');
+
+    // Clear search input/results
+    const searchInput = document.getElementById('searchInput');
+    const searchResults = document.getElementById('searchResults');
+    searchInput.value = '';
+    searchResults.innerHTML = '';
+});
+
+document.querySelectorAll(".rules details").forEach(d => {
+  d.addEventListener("toggle", () => {
+    if (d.open) {
+      document.querySelectorAll(".rules details").forEach(other => {
+        if (other !== d) other.open = false;
+      });
+    }
+  });
+});
+
+
+</script>
+<script src="solver.js"></script>
+</body>
+</html>
+
